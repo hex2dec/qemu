@@ -1350,7 +1350,7 @@ static int coroutine_fn qemu_rbd_co_block_status(BlockDriverState *bs,
         return status;
     }
 
-#if LIBRBD_VERSION_CODE < LIBRBD_VERSION(1, 17, 0)
+#if LIBRBD_VERSION_CODE < LIBRBD_VERSION(1, 16, 0)
     /*
      * librbd had a bug until early 2022 that affected all versions of ceph that
      * supported fast-diff. This bug results in reporting of incorrect offsets
